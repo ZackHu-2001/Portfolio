@@ -1,113 +1,128 @@
-import Image from "next/image";
+'use client'
+// import Image from "next/image";
+import { RxLinkedinLogo, RxGithubLogo } from "react-icons/rx";
+import { RiGithubLine, RiLinkedinLine } from 'react-icons/ri';
+import { useState } from 'react';
 
 export default function Home() {
+  const [modal, setModal] = useState(false);
+  
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <nav className="flex justify-between items-center py-8 px-16 fixed top-0 w-full font-bold z-[99] shadow-md 
+      bg-white text-black dark:bg-stone-900 dark:text-white shadow-box-shadow dark:shadow-box-shadow-dark">
+        <h1 className="text-xl"><a href="#home">Zack.dev</a></h1>
+
+        <div className="lg:hidden" onClick={() => {setModal(true)}}>
+          <div className="darK:hidden">
+            <img src="/hamburger menu.svg" className="w-12 h-12" alt="" />
+          </div>
+          <div className="hidden dark:inline">
+            <img src="/hamburger menu.svg" className="w-12 h-12" alt="" />
+          </div>
+        </div>
+
+        <ul className="hidden lg:flex justify-between items-center gap-8">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+            
+      <div className={`${modal ? 'w-full' : 'w-0'} transition-all duration-300 h-full fixed left-0 top-0 z-[100] bg-white`}>
+        <div className={`${modal ? '' : 'hidden'} absolute top-8 right-16`} onClick={() => {setModal(false)}}>
+            <img src="/hamburger-menu-close.svg" className="w-12 h-12" alt="" />
+          {/* <svg t="1712813510715" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4651" width="3rem" height="3rem"><path d="M228.864 228.864a38.4 38.4 0 0 1 54.272 0l506.88 506.88a38.4 38.4 0 1 1-54.272 54.272l-506.88-506.88a38.4 38.4 0 0 1 0-54.272z" fill="#0F131A" p-id="4652"></path><path d="M228.7616 795.2384a38.4 38.4 0 0 1 0-54.272l506.88-506.88a38.4 38.4 0 0 1 54.272 54.272l-506.88 506.88a38.4 38.4 0 0 1-54.272 0z" fill="#0F131A" p-id="4653"></path></svg> */}
+        </div>
+        <div className={`${modal ? '' : 'hidden'} h-full w-full gap-16 text-3xl flex flex-col justify-center items-center`}>
+          <a href="#home" onClick={() => {setModal(false)}}>Home</a>
+          <a href="#about" onClick={() => {setModal(false)}}>About</a>
+          <a href="#projects" onClick={() => {setModal(false)}}>Projects</a>
+          <a href="#contact" onClick={() => {setModal(false)}}>Contact</a>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section id="home" className="flex justify-center bg-bg h-screen w-full">
+        <div className=" py-0 px-16 my-auto max-w-[35rem] lg:my-0 lg:max-w-[65rem]">
+          <div className="flex flex-col-reverse pt-20 items-center relative gap-3 lg:gap-20 lg:flex-row lg:h-[47rem]">
+            <div className="flex flex-col items-center lg:items-start">
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+              <h1 className="my-8 mx-0 font-bold text-center text-5xl lg:text-6xl lg:text-left">Front-End React Developer</h1>
+              <p className="text-text-color text-lg text-center lg:text-left">Hi, I&apos;m Zack. A passionate Front-end React Developer based in Vancouver, Canada. 📍</p>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+              <span className="flex my-6 gap-4">
+                <a aria-label="linkedin" href="https://www.linkedin.com/in/zixiang-hu/"><RxLinkedinLogo className="in-page-logo" /></a>
+                <a aria-label="github" href="https://github.com/zackHu-2001/"><RxGithubLogo className="in-page-logo" /></a>
+              </span>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+            </div>
+            <div className="selfie w-80 h-80 lg:w-100 lg:h-100">
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+            </div>
+          </div>
+          <div className="flex flex-col items-center lg:flex-row">
+            <p className=" border-solid border-b-2 my-4 lg:mr-16 lg:border-r-2 lg:border-b-0 lg:pr-4">Tech Stack</p>
+            <div className="flex gap-2">
+              <div className="tech-stack">
+                <img className="item" src="https://skillicons.dev/icons?i=react" alt="jsIcon" />
+                <img className="item" src="https://skillicons.dev/icons?i=nextjs" alt="jsIcon" />
+                <img className="item" src="https://skillicons.dev/icons?i=ts" alt="jsIcon" />
+                <img className="item" src="https://skillicons.dev/icons?i=tailwind" alt="jsIcon" />
+                <img className="item" src="https://skillicons.dev/icons?i=sass" alt="jsIcon" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="py-[10rem]">
+        <div className="max-w-[35rem] py-0 px-16 my-0 mx-auto lg:max-w-[65rem]">
+          <div className="flex flex-col items-center gap-12 lg:flex-row">
+            <img className="w-[22rem] lg:w-96 rounded-2xl" src="/about.webp" alt="about" />
+            <div className="max-w-[35rem] flex flex-col justify-center items-center gap-6 lg:items-start">
+              <h3 className="font-bold text-lg text-center lg:text-left ">About Me</h3>
+              <h1 className="font-bold text-2xl text-center lg:text-left ">Front-end Developer based in Vancouver, Canada 📍</h1>
+              <p className="text-center lg:text-left" >Hey, my name is Zack, and I&apos;m a Frontend Developer. My passion is to create and develop a clean UI/UX for my users.</p>
+              <p className="text-center lg:text-left">My main stack currently is React/Next.js in combination with Tailwind CSS and TypeScript.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="projects" className="py-24 lg:py-48">
+        <div className="max-w-[35rem] py-0 px-16 my-0 mx-auto lg:max-w-[65rem] ">
+          <div className="flex flex-col justify-center items-center">
+
+            <div className="font-bold text-center text-2xl">
+              New projects comming soon 🪵
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+
+      </section>
+
+      {/* <a href="mailto:zackhu2001@gmail.com">zackhu2001@gmail.com</a> */}
+
+      <footer>
+        <div className=" max-w-[35rem] py-0 px-16 my-0 mx-auto lg:max-w-[65rem]">
+          <div className="flex gap-8 items-center flex-col lg:flex-row lg:justify-between">
+            <div className=" text-lg font-bold">
+              Copyright © 2024. All rights are reserved
+            </div>
+            <div className="flex gap-2">
+              <RiGithubLine className="in-footer-logo" />
+              <RiLinkedinLine className="in-footer-logo" />
+            </div>
+          </div>
+        </div>
+
+      </footer>
+    </>
+  )
 }

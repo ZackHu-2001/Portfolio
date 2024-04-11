@@ -4,30 +4,99 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  background-color: #fff;
+  scroll-behavior: smooth;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  scrollbar-width: thin;
+  scrollbar-color: #8e8e8e #fff;
+  font-family: Poppins,sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+.selfie {
+  animation: morph 8s infinite;
+  background-image: url(/selfie.webp);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #555;
+}
+
+.tech-stack {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.tech-stack img {
+  width: 3rem;
+  height: 3rem;
+  transition: transform .3s ease-in-out;
+}
+
+.tech-stack img:hover {
+  transition: transform .3s ease-in-out;
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: #2d2d2d;
+  color: #fff;
+  padding: 4rem 0;
+}
+
+#projects {
+  background-color: #f9f9f9;
+  width: 100%;
+}
+
+.in-page-logo {
+  width: 2rem;
+  height: 2rem;
+  transition: color .3s ease-in-out;
+}
+
+.in-page-logo:hover {
+  color: #32965D;
+  color: #BCA371;
+  transition: color .3s ease-in-out;
+}
+
+.in-footer-logo {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+}
+
+.in-footer-logo:hover {
+  transform: scale(1.1);
+  transition: transform .3s ease-in-out;
+}
+
+/* .about-img {
+  width: 20rem;
+  border-radius: 1.5rem;
+} */
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 40% 70%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  
 }

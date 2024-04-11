@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "zackhu-portfolio"
+  },
+  "targets": {
+    "zackhu-portfolio": {
+      "hosting": {
+        "https://zackhu-portfolio.web.app": [
+          "https://zackhu.com"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
