@@ -3,23 +3,24 @@
 import { RxLinkedinLogo, RxGithubLogo } from "react-icons/rx";
 import { RiGithubLine, RiLinkedinLine } from 'react-icons/ri';
 import { useState } from 'react';
+import ProjectCard from "@/components/ProjectCard";
 
 export default function Home() {
   const [modal, setModal] = useState(false);
-  
+
   return (
     <>
-      <nav className="flex justify-between items-center py-8 px-16 fixed top-0 w-full font-bold z-[99] shadow-md 
+      <nav className="flex justify-between items-center py-4 px-8 fixed top-0 w-full font-bold z-[99] shadow-md 
       bg-white text-black dark:bg-stone-900 dark:text-white shadow-box-shadow dark:shadow-box-shadow-dark">
         <h1 className="text-xl"><a href="#home">Zack.dev</a></h1>
 
-        <div className="lg:hidden" onClick={() => {setModal(true)}}>
+        <div className="lg:hidden" onClick={() => { setModal(true) }}>
           <div className="darK:hidden">
             <img src="/hamburger menu.svg" className="w-12 h-12" alt="" />
           </div>
-          <div className="hidden dark:inline">
+          {/* <div className="hidden dark:inline">
             <img src="/hamburger menu.svg" className="w-12 h-12" alt="" />
-          </div>
+          </div> */}
         </div>
 
         <ul className="hidden lg:flex justify-between items-center gap-8">
@@ -30,17 +31,17 @@ export default function Home() {
         </ul>
       </nav>
 
-            
+
       <div className={`${modal ? 'w-full' : 'w-0'} transition-all duration-300 h-full fixed left-0 top-0 z-[100] bg-white`}>
-        <div className={`${modal ? '' : 'hidden'} absolute top-8 right-16`} onClick={() => {setModal(false)}}>
-            <img src="/hamburger-menu-close.svg" className="w-12 h-12" alt="" />
+        <div className={`${modal ? '' : 'hidden'} absolute top-8 right-16`} onClick={() => { setModal(false) }}>
+          <img src="/hamburger-menu-close.svg" className="w-12 h-12" alt="" />
           {/* <svg t="1712813510715" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4651" width="3rem" height="3rem"><path d="M228.864 228.864a38.4 38.4 0 0 1 54.272 0l506.88 506.88a38.4 38.4 0 1 1-54.272 54.272l-506.88-506.88a38.4 38.4 0 0 1 0-54.272z" fill="#0F131A" p-id="4652"></path><path d="M228.7616 795.2384a38.4 38.4 0 0 1 0-54.272l506.88-506.88a38.4 38.4 0 0 1 54.272 54.272l-506.88 506.88a38.4 38.4 0 0 1-54.272 0z" fill="#0F131A" p-id="4653"></path></svg> */}
         </div>
         <div className={`${modal ? '' : 'hidden'} h-full w-full gap-16 text-3xl flex flex-col justify-center items-center`}>
-          <a href="#home" onClick={() => {setModal(false)}}>Home</a>
-          <a href="#about" onClick={() => {setModal(false)}}>About</a>
-          <a href="#projects" onClick={() => {setModal(false)}}>Projects</a>
-          <a href="#contact" onClick={() => {setModal(false)}}>Contact</a>
+          <a href="#home" onClick={() => { setModal(false) }}>Home</a>
+          <a href="#about" onClick={() => { setModal(false) }}>About</a>
+          <a href="#projects" onClick={() => { setModal(false) }}>Projects</a>
+          <a href="#contact" onClick={() => { setModal(false) }}>Contact</a>
         </div>
       </div>
 
@@ -92,10 +93,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="py-24 lg:py-48">
+      <section id="projects" className="py-24 lg:py-40">
         <div className="max-w-[35rem] py-0 px-16 my-0 mx-auto lg:max-w-[65rem] ">
-          <div className="flex flex-col justify-center items-center">
-
+          <ProjectCard
+            imgUrl="Tetris.gif"
+            title="Tetris AI Challenge"
+            description="A Tetris game built using React and NextJS with TypeScript. The backend is hosted on EC2 with Nginx, while also featuring an AI mode incorporating both DQN and heuristic-based approaches."
+            githubLink="https://github.com/ZackHu-2001/Tetris-AI"
+            demoLink="https://tetris.zackhu.com/"
+            isSingle={true} />
+          <hr />
+          <div className="flex flex-col justify-center items-center pt-16">
             <div className="font-bold text-center text-2xl">
               New projects comming soon 🪵
             </div>
