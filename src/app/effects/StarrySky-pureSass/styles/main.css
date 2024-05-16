@@ -1,0 +1,87 @@
+.bg {
+  height: 100vh;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #0a0a0a 100%);
+}
+
+h1 {
+  font-size: 3rem;
+  background: linear-gradient(white, #38495a);
+  background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  color: #898989;
+}
+
+.layer1 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  box-shadow: 24vw 18vh #fff, 52vw 8vh rgba(255, 255, 255, 0.5), 52vw 1vh rgba(255, 255, 255, 0.5), 63vw 46vh rgba(255, 255, 255, 0.5), 8vw 19vh rgba(255, 255, 255, 0.5), 24vw 35vh rgba(255, 255, 255, 0.5), 19vw 61vh rgba(255, 255, 255, 0.5), 46vw 21vh rgba(255, 255, 255, 0.5), 53vw 66vh rgba(255, 255, 255, 0.5), 6vw 22vh rgba(255, 255, 255, 0.5), 89vw 54vh rgba(255, 255, 255, 0.5), 64vw 12vh rgba(255, 255, 255, 0.5), 70vw 27vh rgba(255, 255, 255, 0.5), 45vw 49vh rgba(255, 255, 255, 0.5), 50vw 49vh rgba(255, 255, 255, 0.5), 42vw 73vh rgba(255, 255, 255, 0.5), 2vw 66vh rgba(255, 255, 255, 0.5), 65vw 26vh rgba(255, 255, 255, 0.5), 92vw 83vh rgba(255, 255, 255, 0.5), 29vw 27vh rgba(255, 255, 255, 0.5), 25vw 10vh rgba(255, 255, 255, 0.5), 12vw 19vh rgba(255, 255, 255, 0.5), 88vw 19vh rgba(255, 255, 255, 0.5), 71vw 63vh rgba(255, 255, 255, 0.5), 52vw 42vh rgba(255, 255, 255, 0.5), 58vw 38vh rgba(255, 255, 255, 0.5), 97vw 24vh rgba(255, 255, 255, 0.5), 74vw 92vh rgba(255, 255, 255, 0.5), 41vw 27vh rgba(255, 255, 255, 0.5), 10vw 77vh rgba(255, 255, 255, 0.5), 60vw 16vh rgba(255, 255, 255, 0.5), 57vw 38vh rgba(255, 255, 255, 0.5), 70vw 17vh rgba(255, 255, 255, 0.5), 83vw 25vh rgba(255, 255, 255, 0.5), 61vw 37vh rgba(255, 255, 255, 0.5), 67vw 97vh rgba(255, 255, 255, 0.5), 42vw 95vh rgba(255, 255, 255, 0.5), 50vw 93vh rgba(255, 255, 255, 0.5), 65vw 62vh rgba(255, 255, 255, 0.5), 81vw 73vh rgba(255, 255, 255, 0.5), 67vw 13vh rgba(255, 255, 255, 0.5), 49vw 48vh rgba(255, 255, 255, 0.5), 11vw 51vh rgba(255, 255, 255, 0.5), 100vw 94vh rgba(255, 255, 255, 0.5), 23vw 17vh rgba(255, 255, 255, 0.5), 91vw 64vh rgba(255, 255, 255, 0.5), 76vw 65vh rgba(255, 255, 255, 0.5), 10vw 86vh rgba(255, 255, 255, 0.5), 26vw 26vh rgba(255, 255, 255, 0.5), 96vw 45vh rgba(255, 255, 255, 0.5), 100vw 19vh rgba(255, 255, 255, 0.5), 37vw 21vh rgba(255, 255, 255, 0.5), 74vw 7vh rgba(255, 255, 255, 0.5), 46vw 9vh rgba(255, 255, 255, 0.5), 81vw 82vh rgba(255, 255, 255, 0.5), 43vw 33vh rgba(255, 255, 255, 0.5), 29vw 20vh rgba(255, 255, 255, 0.5), 35vw 80vh rgba(255, 255, 255, 0.5), 72vw 46vh rgba(255, 255, 255, 0.5), 35vw 99vh rgba(255, 255, 255, 0.5), 15vw 74vh rgba(255, 255, 255, 0.5), 87vw 13vh rgba(255, 255, 255, 0.5), 100vw 24vh rgba(255, 255, 255, 0.5), 13vw 67vh rgba(255, 255, 255, 0.5), 3vw 96vh rgba(255, 255, 255, 0.5), 100vw 62vh rgba(255, 255, 255, 0.5), 82vw 85vh rgba(255, 255, 255, 0.5), 87vw 36vh rgba(255, 255, 255, 0.5), 8vw 75vh rgba(255, 255, 255, 0.5), 40vw 87vh rgba(255, 255, 255, 0.5), 38vw 95vh rgba(255, 255, 255, 0.5), 16vw 66vh rgba(255, 255, 255, 0.5), 74vw 90vh rgba(255, 255, 255, 0.5), 57vw 41vh rgba(255, 255, 255, 0.5), 73vw 59vh rgba(255, 255, 255, 0.5), 14vw 7vh rgba(255, 255, 255, 0.5), 35vw 19vh rgba(255, 255, 255, 0.5), 78vw 35vh rgba(255, 255, 255, 0.5), 62vw 10vh rgba(255, 255, 255, 0.5), 9vw 74vh rgba(255, 255, 255, 0.5), 7vw 27vh rgba(255, 255, 255, 0.5), 42vw 9vh rgba(255, 255, 255, 0.5), 17vw 8vh rgba(255, 255, 255, 0.5), 43vw 15vh rgba(255, 255, 255, 0.5), 73vw 85vh rgba(255, 255, 255, 0.5), 38vw 100vh rgba(255, 255, 255, 0.5), 67vw 95vh rgba(255, 255, 255, 0.5), 98vw 85vh rgba(255, 255, 255, 0.5), 78vw 12vh rgba(255, 255, 255, 0.5), 98vw 46vh rgba(255, 255, 255, 0.5), 46vw 3vh rgba(255, 255, 255, 0.5), 38vw 74vh rgba(255, 255, 255, 0.5), 62vw 100vh rgba(255, 255, 255, 0.5), 49vw 47vh rgba(255, 255, 255, 0.5), 6vw 92vh rgba(255, 255, 255, 0.5), 86vw 81vh rgba(255, 255, 255, 0.5), 46vw 18vh rgba(255, 255, 255, 0.5), 64vw 38vh rgba(255, 255, 255, 0.5), 59vw 94vh rgba(255, 255, 255, 0.5), 80vw 75vh rgba(255, 255, 255, 0.5);
+  animation: moveup 300s linear infinite;
+}
+
+.layer1::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 100vh;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  box-shadow: inherit;
+}
+
+.layer2 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  box-shadow: 37vw 22vh #fff, 58vw 70vh rgba(255, 255, 255, 0.7), 40vw 52vh rgba(255, 255, 255, 0.7), 16vw 85vh rgba(255, 255, 255, 0.7), 88vw 97vh rgba(255, 255, 255, 0.7), 70vw 82vh rgba(255, 255, 255, 0.7), 36vw 74vh rgba(255, 255, 255, 0.7), 57vw 92vh rgba(255, 255, 255, 0.7), 64vw 84vh rgba(255, 255, 255, 0.7), 99vw 2vh rgba(255, 255, 255, 0.7), 90vw 84vh rgba(255, 255, 255, 0.7), 44vw 81vh rgba(255, 255, 255, 0.7), 88vw 41vh rgba(255, 255, 255, 0.7), 86vw 6vh rgba(255, 255, 255, 0.7), 80vw 26vh rgba(255, 255, 255, 0.7), 79vw 92vh rgba(255, 255, 255, 0.7), 33vw 83vh rgba(255, 255, 255, 0.7), 7vw 57vh rgba(255, 255, 255, 0.7), 45vw 93vh rgba(255, 255, 255, 0.7), 8vw 26vh rgba(255, 255, 255, 0.7), 24vw 56vh rgba(255, 255, 255, 0.7), 5vw 63vh rgba(255, 255, 255, 0.7), 34vw 68vh rgba(255, 255, 255, 0.7), 15vw 26vh rgba(255, 255, 255, 0.7), 16vw 83vh rgba(255, 255, 255, 0.7), 62vw 62vh rgba(255, 255, 255, 0.7), 24vw 45vh rgba(255, 255, 255, 0.7), 30vw 36vh rgba(255, 255, 255, 0.7), 63vw 71vh rgba(255, 255, 255, 0.7), 40vw 25vh rgba(255, 255, 255, 0.7), 90vw 71vh rgba(255, 255, 255, 0.7), 61vw 100vh rgba(255, 255, 255, 0.7), 84vw 95vh rgba(255, 255, 255, 0.7), 27vw 46vh rgba(255, 255, 255, 0.7), 85vw 66vh rgba(255, 255, 255, 0.7), 36vw 87vh rgba(255, 255, 255, 0.7), 76vw 84vh rgba(255, 255, 255, 0.7), 87vw 69vh rgba(255, 255, 255, 0.7), 100vw 52vh rgba(255, 255, 255, 0.7), 98vw 58vh rgba(255, 255, 255, 0.7), 88vw 86vh rgba(255, 255, 255, 0.7), 5vw 32vh rgba(255, 255, 255, 0.7), 31vw 39vh rgba(255, 255, 255, 0.7), 68vw 27vh rgba(255, 255, 255, 0.7), 24vw 63vh rgba(255, 255, 255, 0.7), 50vw 24vh rgba(255, 255, 255, 0.7), 62vw 55vh rgba(255, 255, 255, 0.7), 76vw 23vh rgba(255, 255, 255, 0.7), 28vw 53vh rgba(255, 255, 255, 0.7), 42vw 98vh rgba(255, 255, 255, 0.7), 6vw 62vh rgba(255, 255, 255, 0.7), 43vw 81vh rgba(255, 255, 255, 0.7), 59vw 85vh rgba(255, 255, 255, 0.7), 52vw 72vh rgba(255, 255, 255, 0.7), 25vw 23vh rgba(255, 255, 255, 0.7), 92vw 34vh rgba(255, 255, 255, 0.7), 49vw 99vh rgba(255, 255, 255, 0.7), 82vw 19vh rgba(255, 255, 255, 0.7), 1vw 44vh rgba(255, 255, 255, 0.7), 87vw 73vh rgba(255, 255, 255, 0.7), 36vw 51vh rgba(255, 255, 255, 0.7), 48vw 21vh rgba(255, 255, 255, 0.7), 23vw 38vh rgba(255, 255, 255, 0.7), 25vw 4vh rgba(255, 255, 255, 0.7), 79vw 15vh rgba(255, 255, 255, 0.7), 30vw 2vh rgba(255, 255, 255, 0.7), 31vw 61vh rgba(255, 255, 255, 0.7), 31vw 49vh rgba(255, 255, 255, 0.7), 81vw 10vh rgba(255, 255, 255, 0.7), 60vw 36vh rgba(255, 255, 255, 0.7), 94vw 100vh rgba(255, 255, 255, 0.7), 2vw 11vh rgba(255, 255, 255, 0.7), 13vw 57vh rgba(255, 255, 255, 0.7), 51vw 63vh rgba(255, 255, 255, 0.7), 8vw 20vh rgba(255, 255, 255, 0.7), 61vw 99vh rgba(255, 255, 255, 0.7), 47vw 92vh rgba(255, 255, 255, 0.7), 93vw 68vh rgba(255, 255, 255, 0.7), 38vw 13vh rgba(255, 255, 255, 0.7), 23vw 98vh rgba(255, 255, 255, 0.7), 51vw 58vh rgba(255, 255, 255, 0.7), 54vw 100vh rgba(255, 255, 255, 0.7), 58vw 84vh rgba(255, 255, 255, 0.7), 63vw 88vh rgba(255, 255, 255, 0.7), 67vw 61vh rgba(255, 255, 255, 0.7), 84vw 35vh rgba(255, 255, 255, 0.7), 100vw 50vh rgba(255, 255, 255, 0.7), 62vw 44vh rgba(255, 255, 255, 0.7), 12vw 46vh rgba(255, 255, 255, 0.7), 93vw 50vh rgba(255, 255, 255, 0.7), 95vw 59vh rgba(255, 255, 255, 0.7), 13vw 44vh rgba(255, 255, 255, 0.7), 68vw 57vh rgba(255, 255, 255, 0.7), 96vw 34vh rgba(255, 255, 255, 0.7), 34vw 38vh rgba(255, 255, 255, 0.7), 61vw 42vh rgba(255, 255, 255, 0.7), 44vw 71vh rgba(255, 255, 255, 0.7), 92vw 94vh rgba(255, 255, 255, 0.7), 5vw 96vh rgba(255, 255, 255, 0.7), 8vw 8vh rgba(255, 255, 255, 0.7);
+  animation: moveup 150s linear infinite;
+}
+.layer2::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 100vh;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  box-shadow: inherit;
+}
+
+.layer3 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  box-shadow: 96vw 31vh #fff, 73vw 77vh rgba(255, 255, 255, 0.9), 66vw 51vh rgba(255, 255, 255, 0.9), 4vw 94vh rgba(255, 255, 255, 0.9), 89vw 57vh rgba(255, 255, 255, 0.9), 48vw 72vh rgba(255, 255, 255, 0.9), 54vw 82vh rgba(255, 255, 255, 0.9), 33vw 81vh rgba(255, 255, 255, 0.9), 53vw 24vh rgba(255, 255, 255, 0.9), 83vw 3vh rgba(255, 255, 255, 0.9), 54vw 35vh rgba(255, 255, 255, 0.9), 23vw 92vh rgba(255, 255, 255, 0.9), 60vw 83vh rgba(255, 255, 255, 0.9), 9vw 83vh rgba(255, 255, 255, 0.9), 83vw 45vh rgba(255, 255, 255, 0.9), 41vw 89vh rgba(255, 255, 255, 0.9), 70vw 80vh rgba(255, 255, 255, 0.9), 74vw 57vh rgba(255, 255, 255, 0.9), 82vw 84vh rgba(255, 255, 255, 0.9), 66vw 97vh rgba(255, 255, 255, 0.9), 45vw 67vh rgba(255, 255, 255, 0.9), 92vw 44vh rgba(255, 255, 255, 0.9), 95vw 78vh rgba(255, 255, 255, 0.9), 91vw 13vh rgba(255, 255, 255, 0.9), 45vw 99vh rgba(255, 255, 255, 0.9), 86vw 53vh rgba(255, 255, 255, 0.9), 48vw 42vh rgba(255, 255, 255, 0.9), 60vw 18vh rgba(255, 255, 255, 0.9), 21vw 35vh rgba(255, 255, 255, 0.9), 55vw 81vh rgba(255, 255, 255, 0.9), 60vw 31vh rgba(255, 255, 255, 0.9), 35vw 89vh rgba(255, 255, 255, 0.9), 46vw 47vh rgba(255, 255, 255, 0.9), 53vw 94vh rgba(255, 255, 255, 0.9), 96vw 63vh rgba(255, 255, 255, 0.9), 100vw 15vh rgba(255, 255, 255, 0.9), 75vw 25vh rgba(255, 255, 255, 0.9), 13vw 93vh rgba(255, 255, 255, 0.9), 39vw 12vh rgba(255, 255, 255, 0.9), 66vw 67vh rgba(255, 255, 255, 0.9), 20vw 57vh rgba(255, 255, 255, 0.9), 58vw 29vh rgba(255, 255, 255, 0.9), 52vw 25vh rgba(255, 255, 255, 0.9), 29vw 82vh rgba(255, 255, 255, 0.9), 91vw 52vh rgba(255, 255, 255, 0.9), 1vw 57vh rgba(255, 255, 255, 0.9), 23vw 71vh rgba(255, 255, 255, 0.9), 78vw 43vh rgba(255, 255, 255, 0.9), 78vw 23vh rgba(255, 255, 255, 0.9), 27vw 62vh rgba(255, 255, 255, 0.9), 77vw 89vh rgba(255, 255, 255, 0.9), 17vw 12vh rgba(255, 255, 255, 0.9), 93vw 4vh rgba(255, 255, 255, 0.9), 64vw 57vh rgba(255, 255, 255, 0.9), 98vw 8vh rgba(255, 255, 255, 0.9), 31vw 78vh rgba(255, 255, 255, 0.9), 84vw 97vh rgba(255, 255, 255, 0.9), 93vw 82vh rgba(255, 255, 255, 0.9), 20vw 30vh rgba(255, 255, 255, 0.9), 93vw 49vh rgba(255, 255, 255, 0.9), 14vw 76vh rgba(255, 255, 255, 0.9), 86vw 93vh rgba(255, 255, 255, 0.9), 82vw 18vh rgba(255, 255, 255, 0.9), 43vw 38vh rgba(255, 255, 255, 0.9), 30vw 41vh rgba(255, 255, 255, 0.9), 55vw 60vh rgba(255, 255, 255, 0.9), 95vw 68vh rgba(255, 255, 255, 0.9), 76vw 81vh rgba(255, 255, 255, 0.9), 85vw 97vh rgba(255, 255, 255, 0.9), 13vw 46vh rgba(255, 255, 255, 0.9), 92vw 51vh rgba(255, 255, 255, 0.9), 51vw 31vh rgba(255, 255, 255, 0.9), 39vw 56vh rgba(255, 255, 255, 0.9), 18vw 51vh rgba(255, 255, 255, 0.9), 62vw 71vh rgba(255, 255, 255, 0.9), 69vw 71vh rgba(255, 255, 255, 0.9), 20vw 5vh rgba(255, 255, 255, 0.9), 87vw 48vh rgba(255, 255, 255, 0.9), 79vw 5vh rgba(255, 255, 255, 0.9), 60vw 75vh rgba(255, 255, 255, 0.9), 76vw 13vh rgba(255, 255, 255, 0.9), 27vw 3vh rgba(255, 255, 255, 0.9), 72vw 80vh rgba(255, 255, 255, 0.9), 87vw 52vh rgba(255, 255, 255, 0.9), 21vw 46vh rgba(255, 255, 255, 0.9), 52vw 68vh rgba(255, 255, 255, 0.9), 17vw 69vh rgba(255, 255, 255, 0.9), 61vw 40vh rgba(255, 255, 255, 0.9), 22vw 67vh rgba(255, 255, 255, 0.9), 5vw 29vh rgba(255, 255, 255, 0.9), 12vw 38vh rgba(255, 255, 255, 0.9), 19vw 19vh rgba(255, 255, 255, 0.9), 20vw 13vh rgba(255, 255, 255, 0.9), 62vw 40vh rgba(255, 255, 255, 0.9), 86vw 70vh rgba(255, 255, 255, 0.9), 71vw 35vh rgba(255, 255, 255, 0.9), 74vw 6vh rgba(255, 255, 255, 0.9), 75vw 62vh rgba(255, 255, 255, 0.9), 13vw 40vh rgba(255, 255, 255, 0.9), 47vw 10vh rgba(255, 255, 255, 0.9);
+  animation: moveup 75s linear infinite;
+}
+.layer3::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 100vh;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  box-shadow: inherit;
+}
+
+@keyframes moveup {
+  to {
+    transform: translateY(-100vh);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

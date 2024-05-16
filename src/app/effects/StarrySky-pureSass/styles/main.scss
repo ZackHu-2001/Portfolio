@@ -1,0 +1,61 @@
+.bg {
+    height: 100vh;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #0a0a0a 100%);
+}
+
+h1 {
+    font-size: 3rem;
+    background: linear-gradient(white, #38495a);
+    background-clip: text;
+    color: transparent;
+}
+
+h2 {
+    color: #898989;
+}
+
+@function getShadows($n, $alpha) {
+    $shadows: '#{random(100)}vw #{random(100)}vh #fff';
+
+    @for $i from 2 through $n {
+        $shadows: '#{$shadows}, #{random(100)}vw #{random(100)}vh rgba(255, 255, 255, #{$alpha})';
+    }
+
+    @return $shadows;
+}
+
+$size: 3px;
+$duration: 600s;
+@for $i from 1 through 3 {
+    $duration: $duration / 2;
+    .layer#{$i} {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: unquote($i + 1 + 'px');
+        height: unquote($i + 1 + 'px');
+        border-radius: 50%;
+        box-shadow: unquote(getShadows(100, 0.3+0.2*$i));
+        animation: moveup $duration linear infinite;
+
+        &::after {
+            content: "";
+            position: fixed;
+            left: 0;
+            top: 100vh;
+            width: inherit;
+            height: inherit;
+            border-radius: inherit;
+            box-shadow: inherit;
+
+        }
+    }
+
+}
+
+
+@keyframes moveup {
+    to {
+        transform: translateY(-100vh);
+    }
+}
