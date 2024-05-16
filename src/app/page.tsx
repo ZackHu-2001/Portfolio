@@ -18,9 +18,6 @@ export default function Home() {
           <div className="darK:hidden">
             <img src="/hamburger menu.svg" className="w-12 h-12" alt="" />
           </div>
-          {/* <div className="hidden dark:inline">
-            <img src="/hamburger menu.svg" className="w-12 h-12" alt="" />
-          </div> */}
         </div>
 
         <ul className="hidden lg:flex justify-between items-center gap-8">
@@ -45,9 +42,9 @@ export default function Home() {
         </div>
       </div>
 
-      <section id="home" className="flex justify-center bg-bg h-screen w-full">
-        <div className=" py-0 px-16 my-auto max-w-[35rem] lg:my-0 lg:max-w-[65rem]">
-          <div className="flex flex-col-reverse pt-20 items-center relative gap-3 lg:gap-20 lg:flex-row lg:h-[47rem]">
+      <section id="home" className="flex justify-center bg-bg w-full">
+        <div className=" py-20 px-16 my-auto max-w-[35rem] lg:my-0 lg:max-w-[65rem]">
+          <div className="flex flex-col-reverse items-center relative gap-3 lg:gap-20 lg:flex-row lg:h-[47rem]">
             <div className="flex flex-col items-center lg:items-start">
 
               <h1 className="my-8 mx-0 font-bold text-center text-5xl lg:text-6xl lg:text-left">Front-End React Developer</h1>
