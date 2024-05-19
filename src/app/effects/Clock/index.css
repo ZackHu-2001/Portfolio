@@ -1,0 +1,71 @@
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    width: 600px;
+    height: 200px;
+    display: flex;
+    border: 0.5rem solid #ccc;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    margin-top: 2rem;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.digitContainer {
+    color: white;
+    width: 40px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.digitPart {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 10px solid transparent;
+}
+
+.top {
+    border-bottom-width: 5px;
+}
+
+.bottom {
+    border-top-width: 5px;
+}
+
+.border-top {
+    border-top-color: white;
+}
+
+.border-bottom {
+    border-bottom-color: white;
+}
+
+.border-left {
+    border-left-color: white;
+}
+
+.border-right {
+    border-right-color: white;
+}
+
+.segment {
+    display: flex;
+    height: 80px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.segment .dot {
+    background-color: white;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
