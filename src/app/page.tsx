@@ -1,9 +1,9 @@
 'use client'
-// import Image from "next/image";
+import Link from 'next/link'
 import { RxLinkedinLogo, RxGithubLogo } from "react-icons/rx";
 import { RiGithubLine, RiLinkedinLine } from 'react-icons/ri';
 import { useState } from 'react';
-import ProjectCard from "@/components/ProjectCard";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   const [modal, setModal] = useState(false);
@@ -24,12 +24,12 @@ export default function Home() {
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><Link href="https://zackhu.hashnode.dev/">Blogs</Link></li>
         </ul>
       </nav>
 
 
-      <div className={`${modal ? 'w-full' : 'w-0'} transition-all duration-300 h-full fixed left-0 top-0 z-[100] bg-white`}>
+      <div className={`${modal ? 'w-full' : 'w-0'} transition-all duration-500 h-full fixed left-0 top-0 z-[100] bg-white`}>
         <div className={`${modal ? '' : 'hidden'} absolute top-8 right-16`} onClick={() => { setModal(false) }}>
           <img src="/hamburger-menu-close.svg" className="w-12 h-12" alt="" />
           {/* <svg t="1712813510715" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4651" width="3rem" height="3rem"><path d="M228.864 228.864a38.4 38.4 0 0 1 54.272 0l506.88 506.88a38.4 38.4 0 1 1-54.272 54.272l-506.88-506.88a38.4 38.4 0 0 1 0-54.272z" fill="#0F131A" p-id="4652"></path><path d="M228.7616 795.2384a38.4 38.4 0 0 1 0-54.272l506.88-506.88a38.4 38.4 0 0 1 54.272 54.272l-506.88 506.88a38.4 38.4 0 0 1-54.272 0z" fill="#0F131A" p-id="4653"></path></svg> */}
@@ -44,11 +44,12 @@ export default function Home() {
 
       <section id="home" className="flex justify-center bg-bg w-full">
         <div className=" py-20 px-16 my-auto max-w-[35rem] lg:my-0 lg:max-w-[65rem]">
-          <div className="flex flex-col-reverse items-center relative gap-3 lg:gap-20 lg:flex-row lg:h-[47rem]">
+          <div className="flex flex-col-reverse items-center relative gap-3 lg:gap-20 lg:flex-row  lg:h-[74vh]">
             <div className="flex flex-col items-center lg:items-start">
 
-              <h1 className="my-8 mx-0 font-bold text-center text-5xl lg:text-6xl lg:text-left">Front-End React Developer</h1>
-              <p className="text-text-color text-lg text-center lg:text-left">Hi, I&apos;m Zack. A passionate Front-end React Developer based in Vancouver, Canada. 📍</p>
+              <h1 className="mt-8 mx-0 font-bold text-center text-6xl lg:text-7xl lg:text-left">Front-End</h1>
+              <h3 className="mb-8 mx-0 font-bold text-center text-5xl lg:text-6xl lg:text-left">Developer</h3>
+              <p className="text-text-color text-lg text-center lg:text-left">Hi, I&apos;m Zack. A passionate Front-End Developer based in Vancouver, Canada. 📍</p>
 
               <span className="flex my-6 gap-4">
                 <a aria-label="linkedin" href="https://www.linkedin.com/in/zixiang-hu/"><RxLinkedinLogo className="in-page-logo" /></a>
@@ -86,11 +87,32 @@ export default function Home() {
               <p className="text-center lg:text-left">My main stack currently is React/Next.js in combination with Tailwind CSS and TypeScript.</p>
             </div>
           </div>
-
         </div>
       </section>
 
       <section id="projects" className="py-24 lg:py-40">
+        <div className="max-w-[35rem] py-0 px-16 my-0 mx-auto lg:max-w-[65rem] ">
+
+          <Projects />
+          {/* <h1 className='w-full text-4xl font-bold my-6 tracking-tighter'>May 2024</h1>
+          <hr />
+          <ProjectCard
+            imgUrl="Tetris.gif"
+            title="Tetris AI Challenge"
+            description="A Tetris game built using React and NextJS with TypeScript. The backend is hosted on EC2 with Nginx, while also featuring an AI mode incorporating both DQN and heuristic-based approaches."
+            githubLink="https://github.com/ZackHu-2001/Tetris-AI"
+            demoLink="https://tetris.zackhu.com/"
+            isSingle={true} /> */}
+          
+          <div className="flex flex-col justify-center items-center pt-16">
+            <div className="font-bold text-center text-2xl">
+              More projects comming soon 🪵
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <section id="effects" className="py-24 lg:py-40">
         <div className="max-w-[35rem] py-0 px-16 my-0 mx-auto lg:max-w-[65rem] ">
           <ProjectCard
             imgUrl="Tetris.gif"
@@ -106,7 +128,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section id="contact">
 

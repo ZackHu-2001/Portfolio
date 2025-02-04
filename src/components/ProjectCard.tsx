@@ -13,11 +13,11 @@ type ProjectCardProp = {
 
 const ProjectCard: React.FC<ProjectCardProp> = ({ imgUrl, title, description, githubLink, demoLink, isSingle }) => {
     return (
-        <div className="flex flex-col lg:flex-row gap-8 justify-center my-8">
+        <div className="flex flex-col lg:flex-row gap-8 justify-center my-8 ">
 
             {isSingle ?
                 <a href='https://www.youtube.com/watch?v=qv6hDonEBK4&t=316s' target='_blank' className='cursor-pointer'>
-                    <img src={imgUrl} alt="" className='rounded-lg w-[30rem] hover:scale-105' />
+                    <img src={imgUrl} alt="" className='rounded-lg w-[30rem] hover:scale-105 transition-all duration-700' />
                 </a> : <></>}
 
 
@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProp> = ({ imgUrl, title, description, gi
 
             {isSingle ? <></> :
                 <a href='https://www.youtube.com/watch?v=qv6hDonEBK4&t=316s' target='_blank' className='cursor-pointer'>
-                    <img src={imgUrl} alt="" className='rounded-lg w-[30rem] hover:scale-105' />
+                    <img src={imgUrl} alt="" className='rounded-lg w-[30rem] hover:scale-105 transition-all duration-700' />
                 </a>}
         </div>
     )

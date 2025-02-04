@@ -5,6 +5,20 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/effects",
+        "destination": "/effects.html"
+      },
+      {
+        "source": "/effects/FlipCard",
+        "destination": "/effects/FlipCard.html"
+      },
+      {
+        "source": "/effects/StarrySky-pureSass",
+        "destination": "/effects/StarrySky-pureSass.html"
+      }
     ]
   }
 }

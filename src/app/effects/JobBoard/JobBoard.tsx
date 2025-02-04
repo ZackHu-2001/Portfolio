@@ -1,6 +1,5 @@
 'use client'
 import { useEffect, useState } from 'react';
-import './index.css';
 
 const jobStoriesUrl = "https://hacker-news.firebaseio.com/v0/jobstories.json";
 const jobDetailsUrl = "https://hacker-news.firebaseio.com/v0/item/";
