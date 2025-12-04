@@ -15,16 +15,26 @@ import { Button } from "@/components/ui/button";
 import { Play, Pause, Github, ExternalLink } from "lucide-react";
 import { motion } from 'framer-motion';
 import Lightbox from "yet-another-react-lightbox";
+import Video from "yet-another-react-lightbox/plugins/video";
 import "yet-another-react-lightbox/styles.css";
+
+interface MediaItem {
+    type: 'image' | 'video';
+    src: string;
+    poster?: string; // For video thumbnail
+}
 
 interface Project {
     id: number;
     title: string;
     description: string;
-    image: string;
+    image: string; // Main thumbnail for carousel
+    logo?: string; // Optional logo to display next to title
+    media?: MediaItem[]; // Multiple images/videos for lightbox
     techStack: string[];
     codeUrl: string;
     demoUrl: string;
+    demoButtonText?: string; // Custom text for demo button
     externalLink?: string;
     isDemo?: boolean;
 }
@@ -32,8 +42,34 @@ interface Project {
 const projects: Project[] = [
     {
         id: 1,
-        title: "Decentralized Donate Platform",
-        description: "DonateChain is a decentralized fundraising platform that enables transparent and secure blockchain-based donations for charitable causes.",
+        title: "ApplyBot",
+        description: "An intelligent job application automation tool that streamlines the job search process.",
+        image: "/api/placeholder/800/600", // Placeholder until you add the main image
+        logo: "/applybot.svg",
+        media: [
+            { type: 'image', src: '/applybot.webp' },
+            // Add your GIF here when ready: { type: 'image', src: '/applybot.gif' }
+        ],
+        techStack: ["MCP", "Chrome Extension", "Playwright"],
+        codeUrl: "https://github.com/ZackHu-2001/ApplyBot",
+        demoUrl: "https://apply-bot.com/",
+        demoButtonText: "Try Now"
+    },
+    {
+        id: 2,
+        title: "Tetris",
+        description: "A classic Tetris game with a competitive AI twist. Features both traditional gameplay and an AI competition mode where Deep Q-Learning agents battle against heuristic strategies.",
+        image: "/Tetris.gif",
+        logo: "/tetris.svg",
+        techStack: ["React", "TypeScript", "Deep Q-Learning"],
+        codeUrl: "https://github.com/ZackHu-2001/Tetris-AI",
+        demoUrl: "https://tetris.zackhu.com/",
+        externalLink: "https://www.youtube.com/watch?v=qv6hDonEBK4&t=316s"
+    },
+    {
+        id: 3,
+        title: "DonateChain",
+        description: "A blockchain-powered fundraising platform built during ETHGlobal hackathon. This demo showcases transparent and secure cryptocurrency donations for charitable causes using Ethereum smart contracts.",
         image: "/donate.webp",
         techStack: ["Solidity", "Ethereum", "IPFS", "D3.js"],
         codeUrl: "https://github.com/ZackHu-2001/DecentralizedDonation",
@@ -42,25 +78,15 @@ const projects: Project[] = [
         isDemo: true
     },
     {
-        id: 2,
+        id: 4,
         title: "Interview Scheduler",
-        description: "An interactive tool for recruiters to schedule technical interviews based on candidate and engineer availability. This is a demo product with simulated data - try it yourself to see how it works!",
+        description: "An interactive design demo showcasing an interview scheduling system with simulated data to demonstrate the user experience for coordinating technical interviews.",
         image: "/interview.webp",
         techStack: ["Next.js", "React", "TypeScript", "CSS"],
         codeUrl: "https://github.com/ZackHu-2001/InterviewScheduler",
         demoUrl: "https://www.speercheck.ca/",
         externalLink: "https://www.speercheck.ca/",
         isDemo: true
-    },
-    {
-        id: 3,
-        title: "Tetris AI Challenge",
-        description: "A Tetris game built using React and NextJS with TypeScript. The backend is hosted on EC2 with Nginx, while also featuring an AI mode incorporating both DQN and heuristic-based approaches.",
-        image: "/Tetris.gif",
-        techStack: ["React", "Zustand", "Deep-Q-Learning"],
-        codeUrl: "https://github.com/ZackHu-2001/Tetris-AI",
-        demoUrl: "https://tetris.zackhu.com/",
-        externalLink: "https://www.youtube.com/watch?v=qv6hDonEBK4&t=316s"
     },
 ];
 
@@ -155,6 +181,13 @@ const ProjectCarousel = () => {
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.5, delay: 0.3 }}
                                         >
+                                            {project.logo && (
+                                                <img
+                                                    src={project.logo}
+                                                    alt={`${project.title} logo`}
+                                                    className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+                                                />
+                                            )}
                                             <h2 className="text-xl sm:text-2xl font-bold transition-all duration-300">
                                                 {project.title}
                                             </h2>
@@ -224,7 +257,7 @@ const ProjectCarousel = () => {
                                             className="inline-flex items-center justify-center gap-2 px-6 py-2 bg-black border border-black rounded-lg text-white hover:bg-gray-800 transition-colors duration-200"
                                         >
                                             <ExternalLink className="h-5 w-5" />
-                                            Live Demo
+                                            {project.demoButtonText || "Live Demo"}
                                         </a>
                                     </motion.div>
                                 </motion.div>
@@ -251,22 +284,40 @@ const ProjectCarousel = () => {
             <Lightbox
                 open={lightboxOpen}
                 close={() => setLightboxOpen(false)}
-                index={lightboxIndex}
-                slides={projects.map(project => ({
-                    src: project.image,
-                    alt: project.title,
-                    title: project.title,
-                    description: project.description
-                }))}
+                index={0}
+                slides={
+                    projects[lightboxIndex]?.media
+                        ? projects[lightboxIndex].media.map(item => {
+                            if (item.type === 'video') {
+                                return {
+                                    type: 'video' as const,
+                                    sources: [{
+                                        src: item.src,
+                                        type: 'video/mp4'
+                                    }],
+                                    poster: item.poster
+                                };
+                            }
+                            return {
+                                src: item.src,
+                                alt: projects[lightboxIndex].title
+                            };
+                        })
+                        : [{
+                            src: projects[lightboxIndex]?.image || '',
+                            alt: projects[lightboxIndex]?.title || ''
+                        }]
+                }
+                plugins={[Video]}
                 carousel={{
-                    finite: true
+                    finite: projects[lightboxIndex]?.media ? projects[lightboxIndex].media!.length <= 1 : true
                 }}
                 controller={{
                     closeOnBackdropClick: true
                 }}
                 render={{
-                    buttonPrev: projects.length > 1 ? undefined : () => null,
-                    buttonNext: projects.length > 1 ? undefined : () => null,
+                    buttonPrev: (projects[lightboxIndex]?.media?.length || 1) > 1 ? undefined : () => null,
+                    buttonNext: (projects[lightboxIndex]?.media?.length || 1) > 1 ? undefined : () => null,
                 }}
             />
         </motion.div>

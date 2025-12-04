@@ -22,10 +22,9 @@ export default function Home() {
         </div>
 
         <ul className="hidden lg:flex justify-between items-center gap-8">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><Link href="https://zackhu.hashnode.dev/">Blogs</Link></li>
+          <li><Link href="/sponsor" className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent font-bold">Sponsor</Link></li>
         </ul>
       </nav>
 
@@ -36,10 +35,9 @@ export default function Home() {
           {/* <svg t="1712813510715" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4651" width="3rem" height="3rem"><path d="M228.864 228.864a38.4 38.4 0 0 1 54.272 0l506.88 506.88a38.4 38.4 0 1 1-54.272 54.272l-506.88-506.88a38.4 38.4 0 0 1 0-54.272z" fill="#0F131A" p-id="4652"></path><path d="M228.7616 795.2384a38.4 38.4 0 0 1 0-54.272l506.88-506.88a38.4 38.4 0 0 1 54.272 54.272l-506.88 506.88a38.4 38.4 0 0 1-54.272 0z" fill="#0F131A" p-id="4653"></path></svg> */}
         </div>
         <div className={`${modal ? '' : 'hidden'} h-full w-full gap-16 text-3xl flex flex-col justify-center items-center`}>
-          <a href="#home" onClick={() => { setModal(false) }}>Home</a>
-          <a href="#about" onClick={() => { setModal(false) }}>About</a>
           <a href="#projects" onClick={() => { setModal(false) }}>Projects</a>
-          <a href="#contact" onClick={() => { setModal(false) }}>Contact</a>
+          <Link href="https://zackhu.hashnode.dev/" onClick={() => { setModal(false) }}>Blogs</Link>
+          <Link href="/sponsor" onClick={() => { setModal(false) }} className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent font-bold">Sponsor</Link>
         </div>
       </div>
 
