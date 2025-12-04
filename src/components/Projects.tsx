@@ -64,6 +64,7 @@ const projects: Project[] = [
         techStack: ["React", "TypeScript", "Deep Q-Learning"],
         codeUrl: "https://github.com/ZackHu-2001/Tetris-AI",
         demoUrl: "https://tetris.zackhu.com/",
+        demoButtonText: "Try Now",
         externalLink: "https://www.youtube.com/watch?v=qv6hDonEBK4&t=316s"
     },
     {
