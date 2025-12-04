@@ -288,7 +288,7 @@ const ProjectCarousel = () => {
                 index={0}
                 slides={
                     projects[lightboxIndex]?.media
-                        ? projects[lightboxIndex].media.map(item => {
+                        ? projects[lightboxIndex].media!.map(item => {
                             if (item.type === 'video') {
                                 return {
                                     type: 'video' as const,
@@ -301,7 +301,7 @@ const ProjectCarousel = () => {
                             }
                             return {
                                 src: item.src,
-                                alt: projects[lightboxIndex].title
+                                alt: projects[lightboxIndex]!.title
                             };
                         })
                         : [{

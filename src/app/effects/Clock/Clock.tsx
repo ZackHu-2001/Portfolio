@@ -129,19 +129,19 @@ const Digit: React.FC<DigitProps> = ({ number }) => {
             <div className={[
                 'digitPart',
                 'top',
-                ...NUMBER_TO_CLASS[number].top
+                ...NUMBER_TO_CLASS[number as keyof typeof NUMBER_TO_CLASS].top
             ].join(' ')}></div>
             <div className={[
                 'digitPart',
                 'bottom',
-                ...NUMBER_TO_CLASS[number].bottom
+                ...NUMBER_TO_CLASS[number as keyof typeof NUMBER_TO_CLASS].bottom
             ].join(' ')}></div>
         </div>
     )
 }
 
 
-function getCurrentTime() {
+function useCurrentTime() {
     const [time, setTime] = useState(new Date());
 
     setInterval(() => {
@@ -152,7 +152,7 @@ function getCurrentTime() {
 }
 
 export default function Clock() {
-    const now = getCurrentTime();
+    const now = useCurrentTime();
     let hours = now.getHours();
     let minutes = now.getMinutes();
     let seconds = now.getSeconds();

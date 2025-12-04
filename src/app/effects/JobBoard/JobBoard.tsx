@@ -11,6 +11,13 @@ interface CardProps {
     url?: string
 }
 
+interface JobPost {
+    by: string,
+    time: number,
+    title: string,
+    url?: string
+}
+
 const Card: React.FC<CardProps> = ({ by, time, title, url }) => {
     const formattedTime = new Date(time * 1000).toLocaleDateString();
     return (
@@ -24,7 +31,7 @@ const Card: React.FC<CardProps> = ({ by, time, title, url }) => {
     )
 }
 
-async function fetchJob(id: number): Promise<object> {
+async function fetchJob(id: number): Promise<JobPost> {
     const response = await fetch(`${jobDetailsUrl}${id}.json`, {
         method: "GET",
         headers: {
@@ -55,7 +62,7 @@ async function getJobList(): Promise<object> {
 export default function JobBoard() {
     const [jobList, setJobList] = useState<number[]>([]);
     const [currentPosition, setcurrentPosition] = useState(0);
-    const [jobPosts, setjobPosts] = useState<object[]>([]);
+    const [jobPosts, setjobPosts] = useState<JobPost[]>([]);
     const [isReady, setIsReady] = useState<boolean>(true);
     const [finished, setFinished] = useState<boolean>(false);
 
