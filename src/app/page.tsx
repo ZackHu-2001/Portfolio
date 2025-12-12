@@ -312,8 +312,12 @@ export default function Home() {
               Copyright © 2024. All rights are reserved
             </div>
             <div className="flex gap-2">
-              <RiGithubLine className="in-footer-logo" />
-              <RiLinkedinLine className="in-footer-logo" />
+              <a aria-label="github" href="https://github.com/zackHu-2001/" target="_blank" rel="noopener noreferrer">
+                <RiGithubLine className="in-footer-logo" />
+              </a>
+              <a aria-label="linkedin" href="https://www.linkedin.com/in/zixiang-hu/" target="_blank" rel="noopener noreferrer">
+                <RiLinkedinLine className="in-footer-logo" />
+              </a>
             </div>
           </div>
         </div>

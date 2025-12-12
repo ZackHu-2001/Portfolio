@@ -12,7 +12,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Play, Pause, Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import { motion } from 'framer-motion';
 import Lightbox from "yet-another-react-lightbox";
 import Video from "yet-another-react-lightbox/plugins/video";
@@ -36,6 +36,7 @@ interface Project {
     demoUrl: string;
     demoButtonText?: string; // Custom text for demo button
     externalLink?: string;
+    videoUrl?: string; // YouTube or external video link
     isDemo?: boolean;
 }
 
@@ -44,16 +45,17 @@ const projects: Project[] = [
         id: 1,
         title: "ApplyBot",
         description: "An intelligent job application automation tool that streamlines the job search process.",
-        image: "/api/placeholder/800/600", // Placeholder until you add the main image
+        image: "/apply-bot.gif",
         logo: "/applybot.svg",
         media: [
-            { type: 'image', src: '/applybot.webp' },
-            // Add your GIF here when ready: { type: 'image', src: '/applybot.gif' }
+            { type: 'image', src: '/apply-bot.gif' },
+            { type: 'image', src: '/applybot.webp' }
         ],
         techStack: ["MCP", "Chrome Extension", "Playwright"],
         codeUrl: "https://github.com/ZackHu-2001/ApplyBot",
         demoUrl: "https://apply-bot.com/",
-        demoButtonText: "Try Now"
+        demoButtonText: "Try Now",
+        videoUrl: "https://www.youtube.com/watch?v=BcPL9qGtJdg&t=11s"
     },
     {
         id: 2,
@@ -65,7 +67,7 @@ const projects: Project[] = [
         codeUrl: "https://github.com/ZackHu-2001/Tetris-AI",
         demoUrl: "https://tetris.zackhu.com/",
         demoButtonText: "Try Now",
-        externalLink: "https://www.youtube.com/watch?v=qv6hDonEBK4&t=316s"
+        videoUrl: "https://www.youtube.com/watch?v=qv6hDonEBK4&t=316s"
     },
     {
         id: 3,
@@ -91,7 +93,7 @@ const projects: Project[] = [
     },
 ];
 
-const AUTOPLAY_INTERVAL = 8000;
+const AUTOPLAY_INTERVAL = 12000;
 
 const ProjectCarousel = () => {
     const [api, setApi] = useState<CarouselApi>();
@@ -192,6 +194,21 @@ const ProjectCarousel = () => {
                                             <h2 className="text-xl sm:text-2xl font-bold transition-all duration-300">
                                                 {project.title}
                                             </h2>
+                                            {project.videoUrl && (
+                                                <a
+                                                    href={project.videoUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-flex items-center justify-center transition-transform duration-200 hover:scale-110"
+                                                    title="Watch video"
+                                                >
+                                                    <img
+                                                        src="/youtube.png"
+                                                        alt="Watch on YouTube"
+                                                        className="w-6 h-6 sm:w-7 sm:h-7 object-contain"
+                                                    />
+                                                </a>
+                                            )}
                                             {project.isDemo && (
                                                 <span className="inline-flex items-center px-2.5 sm:px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800 border border-orange-300">
                                                     DEMO
