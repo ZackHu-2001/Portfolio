@@ -41,56 +41,60 @@ interface Project {
 }
 
 const projects: Project[] = [
-    {
-        id: 1,
-        title: "ApplyBot",
-        description: "An intelligent job application automation tool that streamlines the job search process.",
-        image: "/apply-bot.gif",
-        logo: "/applybot.svg",
-        media: [
-            { type: 'image', src: '/apply-bot.gif' },
-            { type: 'image', src: '/applybot.webp' }
-        ],
-        techStack: ["MCP", "Chrome Extension", "Playwright"],
-        codeUrl: "https://github.com/ZackHu-2001/ApplyBot",
-        demoUrl: "https://apply-bot.com/",
-        demoButtonText: "Try Now",
-        videoUrl: "https://www.youtube.com/watch?v=BcPL9qGtJdg&t=11s"
-    },
-    {
-        id: 2,
-        title: "Tetris",
-        description: "A classic Tetris game with a competitive AI twist. Features both traditional gameplay and an AI competition mode where Deep Q-Learning agents battle against heuristic strategies.",
-        image: "/Tetris.gif",
-        logo: "/tetris.svg",
-        techStack: ["React", "TypeScript", "Deep Q-Learning"],
-        codeUrl: "https://github.com/ZackHu-2001/Tetris-AI",
-        demoUrl: "https://tetris.zackhu.com/",
-        demoButtonText: "Try Now",
-        videoUrl: "https://www.youtube.com/watch?v=qv6hDonEBK4&t=316s"
-    },
-    {
-        id: 3,
-        title: "DonateChain",
-        description: "A blockchain-powered fundraising platform built during ETHGlobal hackathon. This demo showcases transparent and secure cryptocurrency donations for charitable causes using Ethereum smart contracts.",
-        image: "/donate.webp",
-        techStack: ["Solidity", "Ethereum", "IPFS", "D3.js"],
-        codeUrl: "https://github.com/ZackHu-2001/DecentralizedDonation",
-        demoUrl: "https://donate-chain.com/",
-        externalLink: "https://donate-chain.com/",
-        isDemo: true
-    },
-    {
-        id: 4,
-        title: "Interview Scheduler",
-        description: "An interactive design demo showcasing an interview scheduling system with simulated data to demonstrate the user experience for coordinating technical interviews.",
-        image: "/interview.webp",
-        techStack: ["Next.js", "React", "TypeScript", "CSS"],
-        codeUrl: "https://github.com/ZackHu-2001/InterviewScheduler",
-        demoUrl: "https://www.speercheck.ca/",
-        externalLink: "https://www.speercheck.ca/",
-        isDemo: true
-    },
+  {
+    id: 1,
+    title: "ApplyBot",
+    description:
+      "An intelligent job application automation tool that streamlines the job search process.",
+    image: "/apply-bot.gif",
+    logo: "/applybot.svg",
+    media: [
+      { type: "image", src: "/apply-bot.gif" },
+      { type: "image", src: "/applybot.webp" },
+    ],
+    techStack: ["MCP", "Chrome Extension", "Playwright"],
+    codeUrl: "https://github.com/ZackHu-2001/apply-bot",
+    demoUrl: "https://apply-bot.com/",
+    demoButtonText: "Try Now",
+    videoUrl: "https://www.youtube.com/watch?v=BcPL9qGtJdg&t=11s",
+  },
+  {
+    id: 2,
+    title: "Tetris",
+    description:
+      "A classic Tetris game with a competitive AI twist. Features both traditional gameplay and an AI competition mode where Deep Q-Learning agents battle against heuristic strategies.",
+    image: "/Tetris.gif",
+    logo: "/tetris.svg",
+    techStack: ["React", "TypeScript", "Deep Q-Learning"],
+    codeUrl: "https://github.com/ZackHu-2001/Tetris-AI",
+    demoUrl: "https://tetris.zackhu.com/",
+    demoButtonText: "Try Now",
+    videoUrl: "https://www.youtube.com/watch?v=qv6hDonEBK4&t=316s",
+  },
+  {
+    id: 3,
+    title: "DonateChain",
+    description:
+      "A blockchain-powered fundraising platform built during ETHGlobal hackathon. This demo showcases transparent and secure cryptocurrency donations for charitable causes using Ethereum smart contracts.",
+    image: "/donate.webp",
+    techStack: ["Solidity", "Ethereum", "IPFS", "D3.js"],
+    codeUrl: "https://github.com/ZackHu-2001/DecentralizedDonation",
+    demoUrl: "https://donate-chain.com/",
+    externalLink: "https://donate-chain.com/",
+    isDemo: true,
+  },
+  {
+    id: 4,
+    title: "Interview Scheduler",
+    description:
+      "An interactive design demo showcasing an interview scheduling system with simulated data to demonstrate the user experience for coordinating technical interviews.",
+    image: "/interview.webp",
+    techStack: ["Next.js", "React", "TypeScript", "CSS"],
+    codeUrl: "https://github.com/ZackHu-2001/InterviewScheduler",
+    demoUrl: "https://www.speercheck.ca/",
+    externalLink: "https://www.speercheck.ca/",
+    isDemo: true,
+  },
 ];
 
 const AUTOPLAY_INTERVAL = 12000;
